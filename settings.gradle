@@ -1,0 +1,20 @@
+//// --- BLOCK 1: pluginManagement (Must be at the very top) ---
+//pluginManagement {
+//    repositories {
+//        gradlePluginPortal()
+//        mavenCentral()
+//    }
+//}
+//
+//// --- BLOCK 2: dependencyResolutionManagement (Comes after pluginManagement) ---
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        mavenCentral()
+//    }
+//    // Note: dependencyManagement block with 'imports' CANNOT go here.
+//}
+//
+//// --- BLOCK 3: Project includes and other statements (Comes last) ---
+rootProject.name = 'gradle-multi-module'
+include 'boot-app'
