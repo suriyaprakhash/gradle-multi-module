@@ -19,5 +19,6 @@ dependencies {
     // If your convention says "apply id 'org.springframework.boot'", the
     // compiler needs the Spring Boot Plugin's code on its classpath
     // RIGHT NOW to understand what that plugin does.
-    implementation('org.springframework.boot:spring-boot-gradle-plugin:4.0.1')
+//    implementation('org.springframework.boot:spring-boot-gradle-plugin:4.0.1')
+    implementation(libs.spring.boot.gradle.plugin)
 }

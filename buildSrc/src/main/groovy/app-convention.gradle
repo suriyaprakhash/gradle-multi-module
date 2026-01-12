@@ -14,25 +14,25 @@ dependencies {
 
     // Spring Boot BOM: Ensures all boot-starter versions are aligned.
     // We use 'platform' because we aren't using the 'io.spring.dependency-management' plugin.
-    implementation platform("org.springframework.boot:spring-boot-dependencies:4.0.1")
+    implementation platform(libs.spring.boot.bom)
 
     // Spring Cloud BOM: Manages versions for Config, Eureka, etc.
     // This MUST be present for the cloud starters below to resolve without versions.
-    implementation platform('org.springframework.cloud:spring-cloud-dependencies:2025.1.0')
+    implementation platform(libs.spring.cloud.bom)
 
 
 
     // SPRING BOOT - DEPENDENCIES
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    implementation libs.spring.boot.starter.web
+    testImplementation(libs.spring.boot.starter.test)
 
     // SPRING CLOUD - DEPENDENCIES
     // Eureka Client for Service Discovery
 //    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
     // Cloud Config Client for Centralized Config
-    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    implementation libs.spring.cloud.starter.config
     // Recommended: Support for bootstrap.yml (often needed for Config Client)
-    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+    implementation libs.spring.cloud.starter.bootstrap
 }
 
 bootJar {
